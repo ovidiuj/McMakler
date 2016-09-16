@@ -1,0 +1,18 @@
+# Neo/NasaBundle/Resources/config/doctrine/Product.mongodb.yml
+Neo\NasaBundle\Document\Neo:
+    type: document
+    fields:
+        id:
+            type: string
+            id: true
+        date:
+            type: date
+        reference:
+            type: integer
+        name:
+            type: string
+        speed:
+            type: float
+        isHazardous:
+            type: boolean
+            name: is_hazardous

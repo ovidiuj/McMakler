@@ -1,0 +1,12 @@
+nasa:
+    resource: "@NasaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+neo:
+    resource: "@NasaBundle/Resources/config/routing.yml"
+    prefix:   /neo

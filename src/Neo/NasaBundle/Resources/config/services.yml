@@ -1,0 +1,17 @@
+parameters:
+  #Nasa API
+  api.url: "https://api.nasa.gov/neo/rest/v1/feed/"
+  api.key: "N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD"
+
+services:
+    guzzle.http.client:
+      class: GuzzleHttp\Client
+    nasa.api.service:
+        class: Neo\NasaBundle\Services\NasaApiService
+        arguments: ["@guzzle.http.client", '%api.url%', '%api.key%']
+    nasa.content.service:
+        class: Neo\NasaBundle\Services\NasaContentService
+        arguments: ["@jms_serializer"]
+    neo.db.service:
+        class: Neo\NasaBundle\Services\NeoDbService
+        arguments: ["@doctrine_mongodb.odm.document_manager"]

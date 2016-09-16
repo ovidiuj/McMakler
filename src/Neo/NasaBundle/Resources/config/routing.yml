@@ -1,0 +1,7 @@
+neo.hazardous:
+    path : /hazardous
+    defaults:  { _controller: NasaBundle:Neo:hazardous }
+
+neo.fastest:
+    path: /fastest
+    defaults:  { _controller: NasaBundle:Neo:fastest }
